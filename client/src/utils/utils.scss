@@ -1,0 +1,118 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(48, 45, 45, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    // border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: sticky;
+    top: 0;
+    color: white;
+    
+
+    
+    a{
+        color:inherit;
+        text-decoration: none;
+    }
+    .container {
+      padding: 10px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // background-color: #b9e7e7;
+      max-width: 1024px;
+      flex: 1;
+
+      .logo {
+        flex: 1;
+        img {
+          width: 50px;
+        }
+      }
+      Link {
+        text-decoration: none;
+      }
+      .links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 50%;
+        justify-content: space-between;
+        flex: 1;
+        transition: 0.6s ease-in-out;
+
+        h6 {
+          font-size: 16px;
+          font-weight: 500;
+          // transition-property: transform;
+          // transition: 0.25s ease;
+          margin: 20px auto;
+          padding: 0;
+          width: auto;
+          font-family: sans-serif;
+          // text-transform: uppercase;
+          text-align: center;
+          display: inline-block;
+          transition-property: transform;
+          transition: 0.25s ease;
+        }
+        h6::after {
+          content: "";
+          border-top: 4px solid rgb(5, 182, 5);
+          width: 100%;
+          position: absolute;
+          display: block;
+          transform: rotateY(90deg);
+          transition: transform 0.25s linear;
+        }
+        h6:hover {
+          // border-bottom: 2px solid black;
+          transform: scale(1);
+        }
+        h6:hover::after {
+          transform: rotate(0deg);
+        }
+
+        span {
+          cursor: pointer;
+        }
+      }
+      .hamburger{
+        margin: 0px 5px;
+        cursor: pointer;
+        display: none;
+        img{
+          width: 50px;
+        }
+      }
+
+    }
+  }
+  @media (max-width:900px)
+{
+  .nav{
+    .container{
+      .links{
+        flex-direction: column;
+  position: absolute;
+  top: 0;
+  color: white;
+  background: rgba(48, 45, 45, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  height: 100vh;
+  justify-content: space-evenly;
+  min-width: 250px;
+  left: 0;
+  z-index: 200;
+      }
+      .hamburger{
+        display: block;
+      }
+    }
+  }
+}
